@@ -50,7 +50,6 @@ def add(ctx, description):
 
 @cli.command()
 @click.argument('id', type=int)
-@click.pass_context
 def delete(id):
     tasks = json_manage.read_json()
     task = next((x for x in tasks if x['id'] == id), None)
